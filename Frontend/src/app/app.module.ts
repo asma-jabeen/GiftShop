@@ -13,6 +13,7 @@ const appRoutes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'products', component: ProductListComponent },
   { path: 'card-templates', component: CardTemplateComponent },
+  { path: 'card-templates', component: ProductDetailComponent }
 ] 
 @NgModule({
   declarations: [
