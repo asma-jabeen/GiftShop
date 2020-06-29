@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product/product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { CardTemplateComponent } from './card/card-template/card-template.component';
 
 const appRoutes: Routes = [
   { path: '', component: ProductListComponent },
-  { path: 'products', component: ProductListComponent }
+  { path: 'products', component: ProductListComponent },
+  { path: 'card', component: CardTemplateComponent },
 ] 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ProductListComponent,
-    NavBarComponent
+    NavBarComponent,
+    CardTemplateComponent
   ],
   imports: [
     BrowserModule,
