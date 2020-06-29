@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product/product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CardTemplateComponent } from './card/card-template/card-template.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: ProductListComponent },
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
     ProductComponent,
     ProductListComponent,
     NavBarComponent,
-    CardTemplateComponent
+    CardTemplateComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
