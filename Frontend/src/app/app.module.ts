@@ -11,7 +11,7 @@ import { CardTemplateComponent } from './card/card-template/card-template.compon
 const appRoutes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'products', component: ProductListComponent },
-  { path: 'card', component: CardTemplateComponent },
+  { path: 'card-templates', component: CardTemplateComponent },
 ] 
 @NgModule({
   declarations: [
