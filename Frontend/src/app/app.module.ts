@@ -8,8 +8,8 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const appRoutes: Routes = [
-  { path: '', component: ProductComponent },
-  { path: 'products', component: ProductComponent }
+  { path: '', component: ProductListComponent },
+  { path: 'products', component: ProductListComponent }
 ] 
 @NgModule({
   declarations: [
