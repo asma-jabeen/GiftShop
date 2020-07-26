@@ -3,6 +3,7 @@ Frontend/.vs/*
 Backend/.vs/*
 Backend/Backend/bin/*
 Backend/Backend/obj/*
+Frontend/src/assets/images/*
 
 
 ## Ignore Visual Studio temporary files, build results, and

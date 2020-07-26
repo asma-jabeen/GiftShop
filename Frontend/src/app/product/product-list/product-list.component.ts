@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../shared/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -7,37 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Array<any> = [
-    {
-      "Id": 1,
-      "Name": "Mug",
-      "Price": 120
-    },
-    {
-      "Id": 2,
-      "Name": "Shirt",
-      "Price": 150
-    },
-    {
-      "Id": 3,
-      "Name": "Watch",
-      "Price": 200
-    },
-    {
-      "Id": 4,
-      "Name": "Mobile",
-      "Price": 1000
-    },
-    {
-      "Id": 5,
-      "Name": "Shoes",
-      "Price": 500
-    }
-  ]
-
-  constructor() { }
+ 
+  constructor(public service: ProductService) { }
 
   ngOnInit(): void {
+    this.service.refreshList();
   }
 
 }

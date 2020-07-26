@@ -8,6 +8,9 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CardTemplateComponent } from './card/card-template/card-template.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './shared/product.service';
+
 
 const appRoutes: Routes = [
   { path: '', component: ProductListComponent },
@@ -26,9 +29,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

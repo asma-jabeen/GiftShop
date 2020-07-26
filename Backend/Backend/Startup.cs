@@ -22,11 +22,22 @@ namespace Backend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllers();
 
             services.AddDbContext<ProductContext>(optionns =>
-            optionns.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
-        
+    optionns.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+
+            //remove default json formatting
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+                options.JsonSerializerOptions.DictionaryKeyPolicy = null;
+            });
+
+            //add cors package
+            services.AddCors(); 
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +48,12 @@ namespace Backend
                 app.UseDeveloperExceptionPage();
             }
 
+            //configurations to cosume the Web API from port : 4200 (Angualr App)
+            app.UseCors(options =>
+            options.WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -44,7 +61,8 @@ namespace Backend
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
+            }); 
+
         }
     }
 }
