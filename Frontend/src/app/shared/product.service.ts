@@ -9,8 +9,15 @@ export class ProductService {
   formData: Product;
   readonly rootURL = 'http://localhost:50247/api';
   list: Product[];
+  product: Product; 
 
   constructor(private http: HttpClient) { }
+
+  getProduct(id) {
+    return this.http.get(this.rootURL + '/Product/' + id)
+      .toPromise()
+      .then(res => this.product = res as Product);
+  }
 
   postProduct() {
     return this.http.post(this.rootURL + '/Product', this.formData);
