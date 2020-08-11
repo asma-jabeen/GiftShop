@@ -25,7 +25,7 @@ namespace Backend.Models
 
         [Required]
         [Column(TypeName = "varchar(5)")]
-        public string Image { get; set; }
+        public string ImageUrl { get; set; }
 
     }
 }
