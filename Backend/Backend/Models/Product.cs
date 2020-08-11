@@ -20,11 +20,11 @@ namespace Backend.Models
         public string Description { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(16)")]
-        public string Price { get; set; }
+        [Column(TypeName = "int")]
+        public int Price { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(5)")]
+        [Column(TypeName = "varchar(100)")]
         public string ImageUrl { get; set; }
 
     }
