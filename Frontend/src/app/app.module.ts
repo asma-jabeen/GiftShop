@@ -10,6 +10,8 @@ import { CardTemplateComponent } from './card/card-template/card-template.compon
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './shared/product.service';
+import { CartComponent } from './cart/cart/cart.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
 
 
 const appRoutes: Routes = [
@@ -25,7 +27,9 @@ const appRoutes: Routes = [
     ProductListComponent,
     NavBarComponent,
     CardTemplateComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CartComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
